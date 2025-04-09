@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Playlist Search",
+  "version": "1.0",
+  "description": "Search feature for your YouTube playlists!",
+  "permissions": ["scripting"],
+  "icons": {
+    "256": "icon.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  }
+}
