@@ -4,10 +4,14 @@
   "version": "1.0",
   "description": "Search feature for your YouTube playlists!",
   "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "css": ["styles.css"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ],
   "icons": {
     "256": "icon.png"
-  },
-  "action": {
-    "default_popup": "index.html"
   }
 }
