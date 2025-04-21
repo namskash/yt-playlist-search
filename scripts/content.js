@@ -9,7 +9,7 @@ const observer = new MutationObserver(() => {
   if (playlistSearchBox) {
     requestAnimationFrame(() => {
       playlistSearchBox.focus();
-      observer.disconnect();
+      // observer.disconnect();
     });
   }
 });
@@ -43,9 +43,44 @@ function insertPLaylistSearchBox(popupContainer) {
     });
   });
 
+  searchInputBox.addEventListener("keydown", (e) => {
+    console.log(`Keydown! ${e.key}`)
+
+    const filteredPlaylists = Array.from(playlists).filter(
+      (playlist) => playlist.style.display != "none"
+    );
+    let currentIndex = -1;
+
+    if (e.key == "ArrowDown") {
+      console.log("Arrow DOWN");
+      e.preventDefault();
+      currentIndex = (currentIndex + 1) % filteredPlaylists.length;
+
+      highlight(filteredPlaylists, currentIndex);
+    }
+    else if (e.key == "ArrowUp") {
+      console.log("Arrow UP");
+      e.preventDefault();
+      currentIndex = (currentIndex - 1 + filteredPlaylists.length) % filteredPlaylists.length;
+
+      highlight(filteredPlaylists, currentIndex);
+    }
+    else if (e.key == "Enter" && currentIndex != -1) {
+      console.log("Enter");
+      filteredPlaylists[currentIndex].click();
+    }
+  });
+
   const inputContainer = document.createElement("div");
   inputContainer.className = "ytd-playlist-search-input-container";
 
   inputContainer.appendChild(searchInputBox);
   popupContainer.prepend(inputContainer);
+}
+
+function highlight(filteredPlaylists, index) {
+  filteredPlaylists.forEach((playlist, i) => {
+    playlist.background = i == index ? "#e0e0e0" : "";
+    playlist.scrollIntoView({ block: "nearest" });
+  });
 }
