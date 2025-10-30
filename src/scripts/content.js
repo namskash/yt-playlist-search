@@ -1,6 +1,8 @@
 const observer = new MutationObserver(() => {
-  const popupContainer = document.querySelector("ytd-add-to-playlist-renderer");
-  const playlistSearchBox = document.querySelector("#playlist-search-box");
+  const popupContainer = document.querySelector("yt-contextual-sheet-layout");
+  if (!popupContainer) return; // still not visible
+
+  let playlistSearchBox = popupContainer.querySelector('#playlist-search-box');
 
   if (popupContainer && !playlistSearchBox) {
     insertPLaylistSearchBox(popupContainer);
@@ -27,14 +29,14 @@ function insertPLaylistSearchBox(popupContainer) {
   searchInputBox.className = "ytd-playlist-search-input";
 
   const playlists = Array.from(
-    document.querySelectorAll("ytd-playlist-add-to-option-renderer"),
+    popupContainer.querySelectorAll(".yt-list-item-view-model"),
   );
 
   searchInputBox.addEventListener("input", (e) => {
     const filterString = searchInputBox.value.toLowerCase();
 
     playlists.forEach((playlist) => {
-      const playlistLabel = playlist.querySelector("yt-formatted-string#label");
+      const playlistLabel = playlist.querySelector(".yt-list-item-view-model__title");
 
       const playlistName = playlistLabel.innerText.toLowerCase();
       playlist.style.display = playlistName.includes(filterString)
