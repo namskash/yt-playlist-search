@@ -1,7 +1,27 @@
 # YouTube Playlist Search
-**Do you have a lot of YouTube playlists?
-Do you take pride in organizing your playlists?
-Are you TIRED of having to manually scroll and search through your "most recently used" playlists every time you have to add to a playlist?
-Are you ANGRY that YouTube does NOT allow you a simple search bar so that you can find the playlist you need with ease?**
 
-_Then, this Chrome extension is for you!_
+You organize your playlists.
+
+You name them carefully.
+
+You curate them thoughtfully.
+
+And yet — when adding a video — YouTube makes you scroll through a long, recency-based list with no search.
+
+This extension fixes that.
+
+Adds a search bar.
+Filters instantly.
+Restores order to your workflow.
+
+You're Welcome :)
+
+## Screenshots
+
+<img src="./media/YT_Playlist_Search_1.png" alt="Screenshot1" width="100%" />
+
+_You get a nice, simple search bar (in focus by default) at the top of the playlist container_
+
+<img src="./media/YT_Playlist_Search_2.png" alt="Screenshot2" width="100%" />
+
+_Typing in the search bar will show results with the search key as a substring (case-insensitive)_
