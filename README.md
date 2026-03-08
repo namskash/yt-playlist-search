@@ -1,6 +1,7 @@
 <p align="center">
   <img src="./icons/icon-256.png" alt="Logo" width="120" />
 </p>
+
 # YouTube Playlist Search
 
 You organize your playlists.
