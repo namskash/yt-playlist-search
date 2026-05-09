@@ -26,7 +26,9 @@ _You're Welcome_ :)
 - Search bar auto-focuses — start typing immediately
 - Filters playlists in real time (case-insensitive substring match)
 
-**[Demo](https://youtu.be/AKtqhZnfez)**
+## Demo
+
+[![Demo](https://img.youtube.com/vi/AKtqhZnfezY/maxresdefault.jpg)](https://youtu.be/AKtqhZnfezY)
 
 ## Screenshots
 
