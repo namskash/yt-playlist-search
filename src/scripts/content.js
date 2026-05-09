@@ -9,18 +9,39 @@ const PLAYLIST_ITEM_SELECTOR = ".toggleableListItemViewModelHost";
 
 const PLAYLIST_TITLE_SELECTOR = ".ytAttributedStringHost";
 
-// OBSERVER:
-const observer = new MutationObserver(() => {
-  const sheet = document.querySelector(SHEET_SELECTOR);
-  if (!sheet) {
-    console.log("The SHEET_SELECTOR needs to be changed!");
+// KEYBINDING:
+document.addEventListener("keydown", (e) => {
+  if (e.key === "s" && !e.ctrlKey && !e.metaKey && !e.altKey) {
+    const tag = document.activeElement?.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA") return;
+    openSaveToPlaylist();
+  }
+});
+
+function openSaveToPlaylist() {
+  const btn = document.querySelector('button[aria-label^="Save"]');
+  if (btn) {
+    btn.click();
     return;
   }
 
-  const headerContainer = sheet.querySelector(HEADER_CONTAINER_SELECTOR);
-  if (!headerContainer) {
-    console.log("The HEADER_CONTAINER_SELECTOR needs to be changed!");
+  const moreBtn = document.querySelector('button[aria-label="More actions"]');
+  if (moreBtn) {
+    moreBtn.click();
+    setTimeout(() => {
+      const menuItems = document.querySelectorAll("ytd-menu-service-item-renderer yt-formatted-string");
+      const saveItem = [...menuItems].find(el => el.textContent.trim().toLowerCase().includes("save"));
+      saveItem?.closest("ytd-menu-service-item-renderer")?.click();
+    }, 200);
   }
+}
+
+// OBSERVER:
+const observer = new MutationObserver(() => {
+  const sheet = document.querySelector(SHEET_SELECTOR);
+  if (!sheet) return;
+
+  const headerContainer = sheet.querySelector(HEADER_CONTAINER_SELECTOR);
 
   const existingInput = sheet.querySelector("#playlist-search-box");
 
