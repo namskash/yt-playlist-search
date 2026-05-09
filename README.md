@@ -26,6 +26,10 @@ _You're Welcome_ :)
 - Search bar auto-focuses — start typing immediately
 - Filters playlists in real time (case-insensitive substring match)
 
+## Demo
+
+<video src="./media/Demo.mp4" controls width="100%"></video>
+
 ## Screenshots
 
 <img src="./media/YT_Playlist_Search_1.png" alt="Screenshot1" width="100%" />
