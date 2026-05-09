@@ -28,7 +28,7 @@ _You're Welcome_ :)
 
 ## Demo
 
-[![Demo](https://img.youtube.com/vi/AKtqhZnfez/maxresdefault.jpg)](https://youtu.be/AKtqhZnfez)
+[![Demo](./icons/icon-256.png)](https://youtu.be/AKtqhZnfez)
 
 ## Screenshots
 
