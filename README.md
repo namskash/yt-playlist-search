@@ -12,17 +12,17 @@
 
 **And yet — when adding a video — YouTube makes you scroll through a long, recency-based list with no search.**
 
-This extension fixes that. 🛠️
+**This extension fixes that.** 🛠️
 
-Adds a search bar. 👁️‍🗨️
-Filters instantly. 📐
-Restores order to your workflow. 🌱
+- ✅ Adds a search bar. 👁️‍🗨️
+- ✅ Filters instantly. 📐
+- ✅ Restores order to your workflow. 🌱
 
-You're Welcome :)
+_You're Welcome_ :)
 
 ## Features
 
-- Press **`S`** on any video page to instantly open the Save to Playlist popup
+- Press **`S`** on any video page to instantly open the Save to Playlist pop-up
 - Search bar auto-focuses — start typing immediately
 - Filters playlists in real time (case-insensitive substring match)
 
