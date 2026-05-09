@@ -4,21 +4,27 @@
 
 # YouTube Playlist Search
 
-You organize your playlists.
+## 💡 Inspiration - _Does this seem familiar?_
 
-You name them carefully.
+- You organize your playlists.
+- You name them carefully.
+- You curate them thoughtfully.
 
-You curate them thoughtfully.
+**And yet — when adding a video — YouTube makes you scroll through a long, recency-based list with no search.**
 
-And yet — when adding a video — YouTube makes you scroll through a long, recency-based list with no search.
+This extension fixes that. 🛠️
 
-This extension fixes that.
-
-Adds a search bar.
-Filters instantly.
-Restores order to your workflow.
+Adds a search bar. 👁️‍🗨️
+Filters instantly. 📐
+Restores order to your workflow. 🌱
 
 You're Welcome :)
+
+## Features
+
+- Press **`S`** on any video page to instantly open the Save to Playlist popup
+- Search bar auto-focuses — start typing immediately
+- Filters playlists in real time (case-insensitive substring match)
 
 ## Screenshots
 
