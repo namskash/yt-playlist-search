@@ -1,14 +1,13 @@
 // CONSTANTS:
-const SHEET_SELECTOR = "yt-contextual-sheet-layout.ytContextualSheetLayoutHost";
+const SHEET_SELECTOR = "yt-contextual-sheet-layout";
 
-const HEADER_CONTAINER_SELECTOR = ".ytContextualSheetLayoutHeaderContainer";
+const HEADER_CONTAINER_SELECTOR = "yt-panel-header-view-model";
 
-const PLAYLIST_LIST_SELECTOR = "yt-list-view-model.ytListViewModelHost";
+const PLAYLIST_LIST_SELECTOR = ".ytListViewModelHost";
 
-const PLAYLIST_ITEM_SELECTOR =
-  "yt-list-item-view-model.yt-list-item-view-model";
+const PLAYLIST_ITEM_SELECTOR = ".toggleableListItemViewModelHost";
 
-const PLAYLIST_TITLE_SELECTOR = ".yt-list-item-view-model__title";
+const PLAYLIST_TITLE_SELECTOR = ".ytAttributedStringHost";
 
 // OBSERVER:
 const observer = new MutationObserver(() => {
@@ -45,7 +44,7 @@ observer.observe(document.body, {
 
 // INSERT SEARCH BAR:
 function insertPlaylistSearchBox(headerContainer, sheet) {
-  const inputWrapper = document.createElement("yt-panel-header-view-model");
+  const inputWrapper = document.createElement("div");
   inputWrapper.className = "ytd-playlist-search-input-container";
 
   const searchInput = document.createElement("input");
@@ -70,7 +69,7 @@ function insertPlaylistSearchBox(headerContainer, sheet) {
     getPlaylists().forEach((playlist) => {
       const titleEl = playlist.querySelector(PLAYLIST_TITLE_SELECTOR);
 
-      const name = titleEl?.innerText.toLowerCase() || "";
+      const name = titleEl?.textContent.trim().toLowerCase() || "";
       playlist.style.display = name.includes(query) ? "" : "none";
     });
   });
