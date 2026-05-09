@@ -6,7 +6,7 @@
 
 ## 💡 Inspiration - _Does this seem familiar?_
 
-- You organize your playlists.
+- You organize your playlists. _(You have 37 playlists)_
 - You name them carefully.
 - You curate them thoughtfully.
 
@@ -28,7 +28,7 @@ _You're Welcome_ :)
 
 ## Demo
 
-<video src="./media/Demo.mp4" controls width="100%"></video>
+[![Demo](https://img.youtube.com/vi/AKtqhZnfez/maxresdefault.jpg)](https://youtu.be/AKtqhZnfez)
 
 ## Screenshots
 
