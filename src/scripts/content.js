@@ -58,7 +58,8 @@ function insertPlaylistSearchBox(headerContainer, sheet) {
   );
 
   inputWrapper.appendChild(searchInput);
-  headerContainer.prepend(inputWrapper);
+  headerContainer.after(inputWrapper);
+  setTimeout(() => searchInput.focus(), 100);
 
   const getPlaylists = () =>
     Array.from(sheet.querySelectorAll(PLAYLIST_ITEM_SELECTOR));
